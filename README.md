@@ -10,6 +10,7 @@ Welcome to the DEXTERMNESH Game Store! This project is a simple website where us
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Live Stream](#Live) 
 
 ## Description
 
@@ -24,6 +25,9 @@ The DEXTERMNESH Game Store is a frontend web application built using HTML, CSS, 
 ## Installation
 
 To use the DEXTERMNESH Game Store locally
+
+## Live
+https://levismunene01.github.io/MY-PROJECT
 
 ## Usage
 THE game store is a store were one can go and buy PC and play station games
