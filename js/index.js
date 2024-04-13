@@ -66,6 +66,7 @@ function pcGame(game) {
      gameImage.classList.add("card-img-top");
      gameImage.src = game.poster;
      gameImage.alt = game.title;
+     gameImage.style.height = '350px'
  
      // Append game image to card body
      cardBody.appendChild(gameImage);
