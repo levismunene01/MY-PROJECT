@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/Games";
+const BASE_URL = "http://localhost:3000/games";
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchGames();
