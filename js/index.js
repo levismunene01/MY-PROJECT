@@ -26,25 +26,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function fetchGames(searchTerm = '') {
-    fetch(`${BASE_URL}`, {
+    const options = {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
+            // Increase the maximum content length allowed
+            "Content-Length": 25000 // You can adjust this value as needed
         },
-    })
-    .then((response) => response.json())
-    .then((games) => {
-        // Filter games based on the search term
-        const filteredGames = games.filter((game) => game.title.includes(searchTerm));
+    };
 
-        // Clear the game container before displaying filtered games
-        const gameContainer = document.querySelector("#games");
-        gameContainer.innerHTML = '';
+    fetch(`${BASE_URL}`, options)
+        .then((response) => response.json())
+        .then((games) => {
+            // Filter games based on the search term
+            const filteredGames = games.filter((game) => game.title.includes(searchTerm));
 
-        // Display filtered games
-        filteredGames.forEach((game) => pcGame(game));
-    })
-    .catch((err) => console.error(err))
+            // Clear the game container before displaying filtered games
+            const gameContainer = document.querySelector("#games");
+            gameContainer.innerHTML = '';
+
+            // Display filtered games
+            filteredGames.forEach((game) => pcGame(game));
+        })
+        .catch((err) => console.error(err))
 }
 
 function pcGame(game) {
