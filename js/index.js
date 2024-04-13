@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/PC-GAMES";
+const BASE_URL = "https://my-json-server.typicode.com/levismunene01/MY-PROJECT/PC-GAMES";
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchGames();
