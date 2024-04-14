@@ -54,13 +54,14 @@ function fetchGames(searchTerm = '') {
 function pcGame(game) {
     const gameContainer = document.querySelector("#games");
 
-    const parentDiv = document.createElement("div");
-    parentDiv.classList.add("card");
+    const parentDiv = document.createElement("div")
+    parentDiv.classList.add("card")
 
     // Set background image
     parentDiv.style.backgroundImage = `url('https://i.pinimg.com/564x/ff/08/92/ff0892562cb3f08528694f36bf54079f.jpg')`;
     parentDiv.style.backgroundSize = "cover";
     parentDiv.style.backgroundPosition = "center";
+    parentDiv.style.gap = '2px'
 
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
@@ -70,7 +71,7 @@ function pcGame(game) {
      gameImage.classList.add("card-img-top");
      gameImage.src = game.poster;
      gameImage.alt = game.title;
-     gameImage.style.height = '350px'
+    //  gameImage.style.height = '300px'
  
      // Append game image to card body
      cardBody.appendChild(gameImage);
