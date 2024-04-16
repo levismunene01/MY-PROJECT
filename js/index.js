@@ -57,7 +57,7 @@ function pcGame(game) {
     parentDiv.classList.add("card")
 
     // Set background image
-    parentDiv.style.backgroundImage = `url('https://i.pinimg.com/564x/ff/08/92/ff0892562cb3f08528694f36bf54079f.jpg')`
+    parentDiv.style.backgroundImage = `url('https://i.pinimg.com/236x/87/8d/34/878d348a2f820bdb9e9692ed23c3454e.jpg')`
     parentDiv.style.backgroundSize = "cover"
     parentDiv.style.backgroundPosition = "center"
     parentDiv.style.gap = '2px'
@@ -112,17 +112,22 @@ function pcGame(game) {
     gamesSold.classList.add("card-text");
     gamesSold.textContent = `Games Sold: ${game.games_sold}`;
 
-    // Button
-    const purchaseButton = document.createElement("button");
-    purchaseButton.classList.add("btn", "btn-primary", "show-price");
-    purchaseButton.textContent = "PURCHASE GAME";
-    purchaseButton.addEventListener("click", () => {
-        // Direct to payment form
-        window.scrollTo({
-            top: document.getElementById('payment-form').offsetTop,
-            behavior: 'smooth'
-        });
-    });
+
+
+ // Button
+ const purchaseButton = document.createElement("button");
+ purchaseButton.classList.add("btn", "btn-primary", "show-price");
+ purchaseButton.textContent = "PURCHASE GAME";
+ purchaseButton.addEventListener("click", () => {
+     // Display alert for payment information
+     alert("Please proceed with the payment for purchasing the game.");
+     // Trigger offcanvas when "OK" is clicked
+     const offcanvasElement = document.getElementById('offcanvasExample');
+  
+ });
+
+ // Append button to body
+ document.body.appendChild(purchaseButton);
 
     // Set text color to white for specified elements
     [title, purchaseButton, price, developers, publishers, category, gamesSold, description].forEach((elem) => {
@@ -136,7 +141,7 @@ function pcGame(game) {
     gameContainer.appendChild(parentDiv);
 }
 
-// An auto hiding until one agree the terms and condition
+// An autohiding  until one agree the terms and condition
 document.getElementById("showTerms").addEventListener("click", function(event) {
     event.preventDefault();
     document.getElementById("termsAndConditions").style.display = "block";
