@@ -57,7 +57,7 @@ function pcGame(game) {
     parentDiv.classList.add("card")
 
     // Set background image
-    parentDiv.style.backgroundImage = `url('https://i.pinimg.com/236x/87/8d/34/878d348a2f820bdb9e9692ed23c3454e.jpg')`
+    parentDiv.style.backgroundImage = `url('https://i.pinimg.com/236x/1f/b9/08/1fb9083b5d0c71f8cc5054807db4b3ac.jpg')`
     parentDiv.style.backgroundSize = "cover"
     parentDiv.style.backgroundPosition = "center"
     parentDiv.style.gap = '2px'
